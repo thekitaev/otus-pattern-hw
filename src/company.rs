@@ -56,14 +56,14 @@ impl Component for Employee {
         self.salary
     }
 
-    fn add_component(&mut self, _x: Box<dyn Component>) { 
+    fn add_component(&mut self, _x: Box<dyn Component>) {
         println!("employee is leaf, can't add anything")
     }
 }
 
 #[cfg(test)]
 mod test {
-    use crate::company::{Company, Department, Employee, Component};
+    use crate::company::{Company, Component, Department, Employee};
 
     #[test]
     fn test_composite() {
